@@ -1,0 +1,5 @@
+1. App\Model\User set as implements MustVerifyEmail
+
+2 in registercontroller add $user->sendEmailVerificationNotification(); in register function
+
+3

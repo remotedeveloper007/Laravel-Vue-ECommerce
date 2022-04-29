@@ -1,0 +1,33 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+$fa-font-path: '~admin-lte/plugins/fontawesome-free/webfonts';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~admin-lte/dist/css/adminlte.css';
+@import '~admin-lte/dist/css/adminlte.min.css';
+
+
+//Admin LTE includeed
+@import '~admin-lte/plugins/jqvmap/jqvmap.min.css';
+@import '~admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css';
+@import '~admin-lte/plugins/daterangepicker/daterangepicker.css';
+@import '~admin-lte/plugins/summernote/summernote-bs4.css';
+
+/**
+* import fontawesome/scss/fontawesome
+*/
+@import '~admin-lte/plugins/fontawesome-free/css/all.css';
+@import '~admin-lte/plugins/fontawesome-free/css/all.min.css';
+@import '~admin-lte/plugins/fontawesome-free/css/fontawesome.css';
+@import '~admin-lte/plugins/fontawesome-free/css/brands.css';
+@import '~admin-lte/plugins/fontawesome-free/css/regular.css';
+@import '~admin-lte/plugins/fontawesome-free/css/solid.css';
+@import '~admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.css';
+@import '~admin-lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.css';
+@import '~admin-lte/plugins/summernote/summernote.css';
+@import '~admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css';
+// @import '~admin-lte/dist/scss/_small-box.scss';
