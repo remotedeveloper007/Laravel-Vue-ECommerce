@@ -13,12 +13,6 @@ jobs:
       - name: Get the latest code
         uses: actions/checkout@v3  # Checkout the repository code
 
-      # - name: Copy .env
-      #   run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-
-      # - name: Install Dependencies
-      #   run: composer update --ignore-platform-reqs  # Install project dependencies
-
       - name: Copy .env 
         run: cp .env.example .env   # Copy .env file to folder
 
@@ -28,8 +22,8 @@ jobs:
       - name: Generate key
         run: php artisan key:generate  # Generate the application key
 
-      - name: Generate storage link
-        run: php artisan storage:link  # Create symbolic links for storage directories
+      # - name: Generate storage link
+      #   run: php artisan storage:link  # Create symbolic links for storage directories
         
       - name: Run database migrations
         run: php artisan migrate --force  # Run database migrations
@@ -56,6 +50,18 @@ jobs:
 
       - name: Debugging - Check PHP Configuration
         run: php -i
+
+      - name: Debugging - Run Autoload Dump
+        run: composer dump-autoload -o
+
+      - name: Debugging - Show Composer Dependency Tree
+        run: composer show
+
+      - name: Debugging - Display PHP Version
+        run: php -v
+
+      - name: Debugging - Check PHP Extensions
+        run: php -m        
 
       - name: Deploy to FTP Server 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3 # Deploy code to FTP Server
