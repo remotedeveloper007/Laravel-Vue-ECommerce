@@ -41,7 +41,21 @@ jobs:
         run: php artisan optimize  # Optimize the application
 
       - name: Directory Permissions
-        run: chmod -R 775 storage bootstrap/cache 
+        run: chmod -R 775 storage bootstrap/cache
+        
+      - name: Clear Laravel Cache
+        run: |
+          php artisan cache:clear
+          php artisan config:clear
+
+      - name: Debugging - Check Laravel Version
+        run: php artisan --version
+
+      - name: Debugging - List Available Commands
+        run: php artisan list
+
+      - name: Debugging - Check PHP Configuration
+        run: php -i
 
       - name: Deploy to FTP Server 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3 # Deploy code to FTP Server
