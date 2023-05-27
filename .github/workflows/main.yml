@@ -3,7 +3,7 @@ name: Deploy Laravel Project on push
 on:
   push:
     branches:
-      - master  # Deploy when changes are pushed to the master branch
+      - main  # Deploy when changes are pushed to the master branch
 
 jobs:
   web-deploy:
